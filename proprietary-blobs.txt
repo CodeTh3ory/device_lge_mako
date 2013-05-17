@@ -25,7 +25,6 @@
 /system/bin/ks
 /system/bin/mm-audio-send-cal
 /system/bin/mm-qcamera-daemon
-/system/bin/mpdecision
 /system/bin/netmgrd
 /system/bin/nl_listener
 /system/bin/port-bridge

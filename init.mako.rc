@@ -193,7 +193,12 @@ on post-fs-data
     # Enable the setgid bit on the directory
     mkdir /data/audio 0770 media audio
     chmod 2770 /data/audio
-
+    
+    # Setup 160M zram device for swap space
+    write /sys/block/zram0/disksize 167772160
+    exec /system/bin/busybox mkswap /dev/block/zram0
+    exec /system/bin/busybox swapon /dev/block/zram0
+ 
     # kickstart
     mkdir /data/qcks 0770 system system
     chown system /dev/block/platform/msm_sdcc.1/by-name
